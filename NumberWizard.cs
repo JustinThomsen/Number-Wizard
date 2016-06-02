@@ -13,6 +13,8 @@ public class NumberWizard : MonoBehaviour {
 	int count;
 	int diff;
 	double initialguess;
+	KeyCode code;
+
 //used float because there isnt a Math in Unity, only a Mathf
 	void Start () {
 		
