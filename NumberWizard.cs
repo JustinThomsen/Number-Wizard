@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
+namespace Thomsen.NumberWizard
+{
 public class NumberWizard : MonoBehaviour {
 
 	List<int> guesses = new List<int>();
@@ -24,7 +26,7 @@ public class NumberWizard : MonoBehaviour {
 	void Update () {
 		
 		
-		
+		handleInput ();
 		if (Input.GetKeyDown("up")) {
 			if (guess == initialmax-1){
 				print (guess);
@@ -54,6 +56,11 @@ public class NumberWizard : MonoBehaviour {
 			Winning ();
 			
 		}
+	}
+
+	void handleInput ()
+	{
+		throw new System.NotImplementedException ();
 	}
 	
 	void StartGame () {
@@ -110,4 +117,5 @@ public class NumberWizard : MonoBehaviour {
 	//liars 50 = guess - but pick up or down on the first guess 
 	//
 	
+}
 }

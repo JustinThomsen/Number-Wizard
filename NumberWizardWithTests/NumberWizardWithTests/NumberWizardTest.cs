@@ -8,17 +8,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using NUnit.Framework;
+using UnityEngine;
 using System;
 
-namespace NumberWizardWithTests
+namespace Thomsen.NumberWizard
+
 {
 	[TestFixture()]
-	public class Test
+	public class NumberWizardTest
 	{
 		[Test()]
-		public void TestCase ()
+		public void ShouldPassInputToGuessFunction ()
 		{
+			KeyCode testCode = (KeyCode.UpArrow);
+
 		}
 	}
 }
-
