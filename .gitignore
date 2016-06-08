@@ -6,6 +6,7 @@
 /Assets/AssetStoreTools*
 bin/
 test-results/
+obj/
 *.unity
 *.meta
 
