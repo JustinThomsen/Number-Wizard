@@ -5,6 +5,7 @@
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 bin/
+test-results/
 *.unity
 *.meta
 
