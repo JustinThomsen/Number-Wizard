@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace Thomsen.NumberWizard
 {
+
 public class NumberWizard : MonoBehaviour {
 
 	List<int> guesses = new List<int>();
@@ -16,8 +17,7 @@ public class NumberWizard : MonoBehaviour {
 	int diff;
 	double initialguess;
 	KeyCode code;
-
-//used float because there isnt a Math in Unity, only a Mathf
+		
 	void Start () {
 		
 		StartGame();
@@ -25,8 +25,7 @@ public class NumberWizard : MonoBehaviour {
 	
 	void Update () {
 		
-		
-		handleInput ();
+				
 		if (Input.GetKeyDown("up")) {
 			if (guess == initialmax-1){
 				print (guess);
@@ -57,12 +56,8 @@ public class NumberWizard : MonoBehaviour {
 			
 		}
 	}
-
-	void handleInput ()
-	{
-		throw new System.NotImplementedException ();
-	}
 	
+
 	void StartGame () {
 		
 		max = 1000;
@@ -85,6 +80,8 @@ public class NumberWizard : MonoBehaviour {
 		//max = max + 1;
 		//min = min - 1;
 	}
+
+		
 	void RightAnswer() {
 		print ("Your number is " + guess + "\n");
 		//print (guess+ "g"+max+"max"+min+"min");
