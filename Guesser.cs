@@ -16,21 +16,25 @@ namespace Thomsen.NumberWizard
 {
 	public class Guesser
 	{
-		public double currentMax;
-		public double guess;
-		public object Guess (double min, double max, KeyCode code)
+		public int currentMin;
+		public int currentMax;
+		public int currentGuess;
+		public int guess;
+		public double Guess (double min, double max, KeyCode code)
 		{
-
+			currentMin = (int)min;
+			currentMax = (int)max;
+			currentGuess = (int)(min + max)/2;
 			if (code == KeyCode.UpArrow) {
-				guess = System.Math.Round ((max - guess )/ 2);
+				guess = (int)(currentMax + currentGuess) / 2;
 				return guess;
 			} else
 			if (code == KeyCode.DownArrow) {
-				guess = System.Math.Round ((guess - (double)min) / 2);
-				currentMax = guess;
+				currentMax = currentGuess;
+				guess = (int)(currentMin + currentGuess) / 2;
 				return guess;
-			}
-				return null;
+			} else
+			return currentGuess;
 		}
 
 	}

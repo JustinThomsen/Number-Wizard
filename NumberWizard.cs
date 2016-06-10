@@ -6,7 +6,8 @@ namespace Thomsen.NumberWizard
 {
 
 public class NumberWizard : MonoBehaviour {
-
+	
+	Guesser guessy = new Guesser ();
 	List<int> guesses = new List<int>();
 	int max;
 	int initialmax;
@@ -60,22 +61,24 @@ public class NumberWizard : MonoBehaviour {
 
 	void StartGame () {
 		
-		max = 1000;
-		initialmax = max;
-		min = 1;
-		initialmin = min;
-		guess = System.Math.Round (((double)max + (double)min) / 2);
-		diff = System.Math.Abs (max-min);
-		count = 1;
-		initialguess = guess;
-		print ("================================================\n");
-		print ("Welcome to Number Wizard\n");
-		print ("Pick a number in your head and punch a baby seal.\n");
+		//max = 1000;
+		//initialmax = max;
+		//min = 1;
+		//initialmin = min;
+		//guess = System.Math.Round (((double)max + (double)min) / 2);
+		//diff = System.Math.Abs (max-min);
+		//count = 1;
+		//initialguess = guess;
+			guessy.currentMax = 1000;
+			guessy.currentMin = 1;
+			print ("================================================\n");
+			print ("Welcome to Number Wizard\n");
+			print ("Pick a number in your head and punch a baby seal.\n");
 		
-		print ("Max value is " + max +"\n");
-		print ("Min value is " + min + "\n");
-		
-		Instructions();
+			print ("Max value is " + guessy.currentMax +"\n");
+			print ("Min value is " + guessy.currentMin + "\n");
+			
+			Instructions();
 
 		//max = max + 1;
 		//min = min - 1;
