@@ -20,11 +20,12 @@ namespace Thomsen.NumberWizard
 		public int currentMax;
 		public int currentGuess;
 		public int guess;
-		public double Guess (double min, double max, KeyCode code)
+		public int count;
+		public int Guess (int min, int max, KeyCode code)
 		{
-			currentMin = (int)min;
-			currentMax = (int)max;
-			currentGuess = (int)(min + max)/2;
+			currentMin = min;
+			currentMax = max;
+			currentGuess = (min + max)/2;
 			if (code == KeyCode.UpArrow) {
 				guess = (int)(currentMax + currentGuess) / 2;
 				return guess;
