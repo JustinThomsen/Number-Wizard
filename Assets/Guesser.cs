@@ -27,7 +27,10 @@ namespace Thomsen.NumberWizard
 			currentMax = max;
 			currentGuess = (min + max)/2;
 			if (code == KeyCode.UpArrow) {
+				currentMin = currentGuess;
 				guess = (int)(currentMax + currentGuess) / 2;
+				count++;
+
 				return guess;
 			} else
 			if (code == KeyCode.DownArrow) {

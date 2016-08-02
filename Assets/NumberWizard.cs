@@ -15,7 +15,7 @@ public class NumberWizard : MonoBehaviour {
 //	int initialmin;
 //	double guess;
 //	int count;
-	int diff;
+//	int diff;
 //	double initialguess;
 	KeyCode code;
 		
@@ -26,8 +26,10 @@ public class NumberWizard : MonoBehaviour {
 	
 	void Update () {
 		
-				
-//		if (Input.GetKeyDown("up")) {
+		
+		if (Input.GetKeyDown("up")) {
+				guessy.Guess(guessy.currentMin, guessy.currentMax, KeyCode.UpArrow);
+				guessy.count++;
 //			if (guess == initialmax-1){
 //				print (guess);
 //				guess++;
@@ -37,13 +39,17 @@ public class NumberWizard : MonoBehaviour {
 //			}
 //			min = (int) guess;
 //			NextGuess();
-//		}
+				print (guessy.currentGuess);
+				print (guessy.count);
+
+		}
 //		else if (diff <= 1 ) {
 //			print ("Your number is " + guess + "\n");
 //			print (guess+ "g"+max+"max"+min+"min");
 //			Winning();
 //		}
-//		else if (Input.GetKeyDown("down")) {
+		else if (Input.GetKeyDown("down")) {
+				guessy.Guess(guessy.currentMin, guessy.currentMax, KeyCode.DownArrow);
 //			if (guess == (initialmin+1)){
 //				guess--;
 //				RightAnswer();
@@ -51,11 +57,11 @@ public class NumberWizard : MonoBehaviour {
 //			}
 //			max = (int) guess;
 //			NextGuess();
-//		}
-//		else if (Input.GetKeyDown("return")||Input.GetKeyDown("enter")) {
-//			Winning ();
-//			
-//		}
+		}
+		else if (Input.GetKeyDown("return")||Input.GetKeyDown("enter")) {
+			Winning ();
+			
+		}
 	}
 	
 
@@ -71,8 +77,8 @@ public class NumberWizard : MonoBehaviour {
 		//initialguess = guess;
 			guessy.currentMax = 1000;
 			guessy.currentMin = 1;
-			diff = guessy.currentMax - guessy.currentMin;
-			guessy.currentGuess = (int)System.Math.Round (((double)guessy.currentMax + (double)guessy.currentMin) / 2);
+//			diff = guessy.currentMax - guessy.currentMin;
+//			guessy.currentGuess = (int)System.Math.Round (((double)guessy.currentMax + (double)guessy.currentMin) / 2);
 			print ("================================================\n");
 			print ("Welcome to Number Wizard\n");
 			print ("Pick a number in your head and punch a baby seal.\n");
@@ -87,11 +93,11 @@ public class NumberWizard : MonoBehaviour {
 	}
 
 		
-	void RightAnswer() {
-		print ("Your number is " + guessy.currentGuess + "\n");
-		//print (guess+ "g"+max+"max"+min+"min");
-		Winning();
-	}
+//	void RightAnswer() {
+//		print ("Your number is " + guessy.currentGuess + "\n");
+//		//print (guess+ "g"+max+"max"+min+"min");
+//		Winning();
+//	}
 	void Instructions () {
 		print("Is the # higher or lower than " + guessy.currentGuess + "\n");
 		print ("[UP] for higher; [DOWN] for lower; [RETURN] for equal\n");
@@ -106,14 +112,14 @@ public class NumberWizard : MonoBehaviour {
 //
 //	}
 //	
-	void Liar () {
-		print ("You are a liar.  You should move to Portland.");
-		StartGame();
-	}
-	
+//	void Liar () {
+//		print ("You are a liar.  You should move to Portland.");
+//		StartGame();
+//	}
+//	
 	void Winning () {
-		print ("I won in " + guessy.count +" guesses. Have a safe flight.\n");
-		StartGame();
+//		print ("I won in " + guessy.count +" guesses. Have a safe flight.\n");
+//		StartGame();
 	}
 	// Update is called once per frame
 	//liars 50 = guess - but pick up or down on the first guess 

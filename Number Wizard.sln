@@ -1,9 +1,11 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{02C745AB-EA32-5D05-CFC2-5EB38269A931}"
+# Visual Studio 2008
+
+Project("{9440B78A-3EDE-E8A1-8AE8-A10D2D8854CE}") = "Number Wizard", "Assembly-CSharp.csproj", "{02C745AB-EA32-5D05-CFC2-5EB38269A931}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberWizardWithTests", "NumberWizardWithTests\Tests\NumberWizardWithTests\NumberWizardWithTests.csproj", "{58B002AB-2C5C-4597-9878-CD724A55B040}"
+Project("{9440B78A-3EDE-E8A1-8AE8-A10D2D8854CE}") = "Number Wizard", "Assembly-CSharp-Editor.csproj", "{0F06D726-EBE6-832C-A745-8946B40A08D7}"
+EndProject
+Project("{9440B78A-3EDE-E8A1-8AE8-A10D2D8854CE}") = "Number Wizard", "Assembly-UnityScript.unityproj", "{76FBD17E-B284-FD7B-9FD1-194657D89413}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,13 +17,20 @@ Global
 		{02C745AB-EA32-5D05-CFC2-5EB38269A931}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02C745AB-EA32-5D05-CFC2-5EB38269A931}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02C745AB-EA32-5D05-CFC2-5EB38269A931}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58B002AB-2C5C-4597-9878-CD724A55B040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58B002AB-2C5C-4597-9878-CD724A55B040}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58B002AB-2C5C-4597-9878-CD724A55B040}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58B002AB-2C5C-4597-9878-CD724A55B040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F06D726-EBE6-832C-A745-8946B40A08D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F06D726-EBE6-832C-A745-8946B40A08D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F06D726-EBE6-832C-A745-8946B40A08D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F06D726-EBE6-832C-A745-8946B40A08D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76FBD17E-B284-FD7B-9FD1-194657D89413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76FBD17E-B284-FD7B-9FD1-194657D89413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76FBD17E-B284-FD7B-9FD1-194657D89413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76FBD17E-B284-FD7B-9FD1-194657D89413}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+		GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp-Editor.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
 		$1.inheritsSet = null
@@ -37,8 +46,12 @@ Global
 		$3.inheritsSet = VisualStudio
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
+		$0.DotNetNamingPolicy = $4
+		$4.DirectoryNamespaceAssociation = None
+		$4.ResourceNamePolicy = FileFormatDefault
+		$0.StandardHeader = $5
+		$5.Text = 
+		$5.IncludeInNewFiles = True
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
+
 EndGlobal
